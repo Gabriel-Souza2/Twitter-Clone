@@ -10,6 +10,9 @@ export const GlobalStyle = createGlobalStyle`
         outline: 0;
         box-shadow: none;
     }
+    html {
+        font-size: 62.5%;
+    }
     body {
         background-color: ${({ theme }) => theme.background};
         color: ${({ theme }) => theme.text};
