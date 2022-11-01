@@ -4,6 +4,7 @@ export const defaultTheme = {
   main: 'rgb(29, 155, 240)',
   'main-dark': '#1B8CD8',
   text: '#E7E9EA',
+  nick: '#71767b',
   'secundary-text': '#4F5255',
   borders: '#2F3336',
   logo: '#D6D9DB',

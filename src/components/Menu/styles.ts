@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  padding-right: 4rem;
   .twitter-icon {
     color: ${({ theme }) => theme.logo};
     cursor: pointer;
@@ -23,8 +24,6 @@ export const Container = styled.div`
 
     li {
       a {
-        text-decoration: none;
-        color: #fff;
         padding: 1rem;
         padding-right: 3rem;
 

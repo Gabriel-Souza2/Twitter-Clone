@@ -18,6 +18,10 @@ export const GlobalStyle = createGlobalStyle`
         color: ${({ theme }) => theme.text};
         -webkit-font-smoothing: antialiased;
     }
+    a {
+        text-decoration: none;
+        color: ${({ theme }) => theme.text};
+    }
     body, input, textarea, button {
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
