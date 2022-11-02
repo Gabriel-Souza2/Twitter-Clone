@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
   margin-right: 3rem;
@@ -22,27 +22,6 @@ export const Container = styled.div`
     font-size: 2rem;
 
     margin-top: 0.5rem;
-
-    li {
-      a {
-        padding: 1rem;
-
-        display: flex;
-        align-items: center;
-        width: fit-content;
-        gap: 2rem;
-
-        &:hover {
-          border-radius: 9999px;
-          background-color: ${({ theme }) => theme['btn-menu-hover']};
-        }
-
-        .icon-menu {
-          width: 28px;
-          height: 28px;
-        }
-      }
-    }
   }
 
   .btn-tweetar {
@@ -81,10 +60,6 @@ export const Container = styled.div`
 
       align-items: center;
       justify-content: center;
-
-      a span {
-        display: none;
-      }
     }
 
     & {
@@ -100,6 +75,41 @@ export const Container = styled.div`
       span {
         display: none;
       }
+    }
+  }
+`
+
+interface MenuButtonProps {
+  active: boolean
+}
+
+export const MenuButton = styled.a<MenuButtonProps>`
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 2rem;
+
+  ${({ active }) =>
+    active &&
+    css`
+      font-weight: bold;
+    `};
+
+  &:hover {
+    border-radius: 9999px;
+    background-color: ${({ theme }) => theme['btn-menu-hover']};
+  }
+
+  .icon-menu {
+    width: 28px;
+    height: 28px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    & span {
+      display: none;
     }
   }
 `

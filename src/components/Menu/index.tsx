@@ -8,7 +8,7 @@ import {
   TwitterLogo,
   User,
 } from 'phosphor-react'
-import { Container } from './styles'
+import { Container, MenuButton } from './styles'
 
 export function Menu() {
   return (
@@ -17,40 +17,40 @@ export function Menu() {
 
       <ul>
         <li>
-          <a href="">
+          <MenuButton href="" active={true}>
             <HouseLine className="icon-menu" weight="fill" />
             <span>Pagina Inicial</span>
-          </a>
+          </MenuButton>
         </li>
         <li>
-          <a href="">
-            <Hash className="icon-menu" weight="fill" />
+          <MenuButton href="" active={false}>
+            <Hash className="icon-menu" weight="regular" />
             <span>Explorar</span>
-          </a>
+          </MenuButton>
         </li>
         <li>
-          <a href="">
+          <MenuButton href="" active={false}>
             <Bell className="icon-menu" weight="regular" />
             <span>Notificações</span>
-          </a>
+          </MenuButton>
         </li>
         <li>
-          <a href="">
+          <MenuButton href="" active={false}>
             <EnvelopeSimple className="icon-menu" weight="regular" />
             <span>Mensagens</span>
-          </a>
+          </MenuButton>
         </li>
         <li>
-          <a href="">
+          <MenuButton href="" active={false}>
             <User className="icon-menu" weight="regular" />
             <span>Perfil</span>
-          </a>
+          </MenuButton>
         </li>
         <li>
-          <a href="">
+          <MenuButton href="" active={false}>
             <DotsThreeCircle className="icon-menu" weight="regular" />
             <span>Mais</span>
-          </a>
+          </MenuButton>
         </li>
       </ul>
 
