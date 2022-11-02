@@ -4,6 +4,7 @@ import {
   EnvelopeSimple,
   Hash,
   HouseLine,
+  PencilLine,
   TwitterLogo,
   User,
 } from 'phosphor-react'
@@ -12,49 +13,50 @@ import { Container } from './styles'
 export function Menu() {
   return (
     <Container>
-      <TwitterLogo className="twitter-icon" weight="fill" />
+      <TwitterLogo className="icon-twitter" weight="fill" />
 
       <ul>
         <li>
           <a href="">
-            <HouseLine className="menu-icon" weight="fill" />
-            Pagina Inicial
+            <HouseLine className="icon-menu" weight="fill" />
+            <span>Pagina Inicial</span>
           </a>
         </li>
         <li>
           <a href="">
-            <Hash className="menu-icon" weight="fill" />
-            Explorar
+            <Hash className="icon-menu" weight="fill" />
+            <span>Explorar</span>
           </a>
         </li>
         <li>
           <a href="">
-            <Bell className="menu-icon" weight="regular" />
-            Notificações
+            <Bell className="icon-menu" weight="regular" />
+            <span>Notificações</span>
           </a>
         </li>
         <li>
           <a href="">
-            <EnvelopeSimple className="menu-icon" weight="regular" />
-            Mensagens
+            <EnvelopeSimple className="icon-menu" weight="regular" />
+            <span>Mensagens</span>
           </a>
         </li>
         <li>
           <a href="">
-            <User className="menu-icon" weight="regular" />
-            Perfil
+            <User className="icon-menu" weight="regular" />
+            <span>Perfil</span>
           </a>
         </li>
         <li>
           <a href="">
-            <DotsThreeCircle className="menu-icon" weight="regular" />
-            Mais
+            <DotsThreeCircle className="icon-menu" weight="regular" />
+            <span>Mais</span>
           </a>
         </li>
       </ul>
 
       <a href="" className="btn-tweetar ">
-        Twetar
+        <PencilLine className="btn-tweetar-icon" weight="regular" />
+        <span>Tweetar</span>
       </a>
     </Container>
   )

@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${({ theme }) => theme.background};
         color: ${({ theme }) => theme.text};
         -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
     }
     a {
         text-decoration: none;

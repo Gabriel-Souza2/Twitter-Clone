@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding-right: 4rem;
-  .twitter-icon {
+  margin-right: 3rem;
+
+  .icon-twitter {
     color: ${({ theme }) => theme.logo};
     cursor: pointer;
     display: block;
@@ -25,7 +26,6 @@ export const Container = styled.div`
     li {
       a {
         padding: 1rem;
-        padding-right: 3rem;
 
         display: flex;
         align-items: center;
@@ -37,7 +37,7 @@ export const Container = styled.div`
           background-color: ${({ theme }) => theme['btn-menu-hover']};
         }
 
-        .menu-icon {
+        .icon-menu {
           width: 28px;
           height: 28px;
         }
@@ -62,8 +62,44 @@ export const Container = styled.div`
 
     margin-top: 1rem;
 
+    .btn-tweetar-icon {
+      display: none;
+      width: 24px;
+      height: 24px;
+    }
+
     &:hover {
       background-color: ${({ theme }) => theme['main-dark']};
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    &,
+    & ul li {
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+
+      a span {
+        display: none;
+      }
+    }
+
+    & {
+      margin-right: 0;
+    }
+
+    .btn-tweetar {
+      padding: 1.2rem;
+      .btn-tweetar-icon {
+        display: block;
+      }
+
+      span {
+        display: none;
+      }
     }
   }
 `

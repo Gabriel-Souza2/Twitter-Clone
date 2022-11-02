@@ -1,33 +1,29 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
-  width: 100vw;
+  max-width: 1320px;
+  margin: 0 auto;
   height: 100vh;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: auto 1fr;
 `
 
 export const MenuContainer = styled.aside`
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
-  padding-left: 4rem;
+  padding: 1rem 1.5rem;
   border-right: 1px solid ${({ theme }) => theme.borders};
   display: flex;
   flex-direction: column;
-
   justify-content: space-between;
 `
 
-export const User = styled.div`
-  padding-right: 2rem;
-`
+export const User = styled.div``
 
 export const UserButton = styled.a`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, auto);
 
-  padding: 1rem;
+  padding: 1rem 0;
 
   div.avatar-wrapper {
     margin: 0 auto;
@@ -59,6 +55,16 @@ export const UserButton = styled.a`
   &:hover {
     border-radius: 9999px;
     background-color: ${({ theme }) => theme['btn-menu-hover']};
+  }
+
+  @media screen and (max-width: 1024px) {
+    & {
+      grid-template-columns: 1fr;
+    }
+    div.user-info,
+    span.dots {
+      display: none;
+    }
   }
 `
 
