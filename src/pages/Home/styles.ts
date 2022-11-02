@@ -14,6 +14,12 @@ export const MenuContainer = styled.aside`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: 450px) {
+    & {
+      display: none;
+    }
+  }
 `
 
 export const User = styled.div``
@@ -44,10 +50,37 @@ export const UserButton = styled.a`
   }
 `
 
-export const InitialPageContainer = styled.div``
+export const InitialPageContainer = styled.div`
+  display: grid;
+  grid-template-columns: 65% auto;
 
-export const HeaderContainer = styled.header``
+  @media screen and (max-width: 768px) {
+    max-width: 59rem;
+    grid-template-columns: 1fr;
+  }
 
-export const TweetsContainer = styled.aside``
+  @media screen and (max-width: 450px) {
+    grid-template-columns: 100%;
+  }
+`
+
+export const TweetsContainer = styled.main`
+  height: 100vh;
+  border-right: 1px solid ${({ theme }) => theme.borders};
+
+  header {
+    height: 5.3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 1.6rem;
+
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+`
 
 export const TrendsContainer = styled.div``

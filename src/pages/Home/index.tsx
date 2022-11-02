@@ -3,7 +3,6 @@ import { Menu } from '../../components/Menu'
 import { UserInfo } from '../../components/UserInfo'
 import {
   HomeContainer,
-  HeaderContainer,
   MenuContainer,
   User,
   UserButton,
@@ -27,9 +26,10 @@ export function Home() {
         </User>
       </MenuContainer>
       <InitialPageContainer>
-        <HeaderContainer></HeaderContainer>
+        <TweetsContainer>
+          <header>Página Incial</header>
+        </TweetsContainer>
         <TrendsContainer></TrendsContainer>
-        <TweetsContainer></TweetsContainer>
       </InitialPageContainer>
     </HomeContainer>
   )
