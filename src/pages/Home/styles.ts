@@ -81,6 +81,26 @@ export const TweetsContainer = styled.main`
 
     background-color: rgba(0, 0, 0, 0.4);
   }
+
+  .avatar-menu-button {
+    background: transparent;
+    border: none;
+  }
+
+  .avatar-wrapper {
+    margin-right: 2rem;
+    display: none;
+  }
+
+  @media screen and (max-width: 450px) {
+    & header {
+      font-size: 1.6rem;
+      justify-content: center;
+    }
+    .avatar-wrapper {
+      display: block;
+    }
+  }
 `
 
 export const TrendsContainer = styled.div``
