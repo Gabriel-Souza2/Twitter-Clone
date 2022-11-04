@@ -52,7 +52,7 @@ export const UserButton = styled.a`
 
 export const InitialPageContainer = styled.div`
   display: grid;
-  grid-template-columns: 65% auto;
+  grid-template-columns: 60% auto;
 
   @media screen and (max-width: 768px) {
     max-width: 59rem;
@@ -60,11 +60,12 @@ export const InitialPageContainer = styled.div`
   }
 
   @media screen and (max-width: 450px) {
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
+    width: 100vw;
   }
 `
 
-export const TweetsContainer = styled.main`
+export const TweetsContainer = styled.div`
   height: 100vh;
   border-right: 1px solid ${({ theme }) => theme.borders};
 
@@ -100,6 +101,66 @@ export const TweetsContainer = styled.main`
     .avatar-wrapper {
       display: block;
     }
+  }
+`
+
+export const Post = styled.div`
+  margin-top: 6.5rem;
+  padding: 0 2rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  .post-wrapper {
+    flex: 1;
+    input {
+      width: 100%;
+      background: transparent;
+      border: none;
+
+      font-size: 2rem;
+      color: ${({ theme }) => theme.nick};
+      padding: 1.2rem 0;
+
+      &::placeholder {
+        color: ${({ theme }) => theme.nick};
+      }
+    }
+  }
+
+  .options-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 2rem;
+  }
+
+  .input-options {
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      button {
+        background: transparent;
+        border: none;
+        color: ${({ theme }) => theme.main};
+        border-radius: 50%;
+        padding: 0.8rem;
+
+        &:hover {
+          background-color: ${({ theme }) => theme['background-input-options']};
+        }
+      }
+    }
+  }
+
+  .btn {
+    width: 10rem;
+    height: 3.8rem;
   }
 `
 

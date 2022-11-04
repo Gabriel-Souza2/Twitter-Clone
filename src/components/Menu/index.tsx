@@ -4,10 +4,10 @@ import {
   EnvelopeSimple,
   Hash,
   HouseLine,
-  PencilLine,
   TwitterLogo,
   User,
 } from 'phosphor-react'
+import { TweetarButton } from '../TweetarButton'
 import { Container, MenuButton } from './styles'
 
 export function Menu() {
@@ -54,10 +54,9 @@ export function Menu() {
         </li>
       </ul>
 
-      <a href="" className="btn-tweetar ">
-        <PencilLine className="btn-tweetar-icon" weight="regular" />
-        <span>Tweetar</span>
-      </a>
+      <div className="btn">
+        <TweetarButton />
+      </div>
     </Container>
   )
 }

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import * as Dialog from '@radix-ui/react-dialog'
 
 export const MenuMobileContainer = styled(Dialog.Portal)``
@@ -10,6 +10,17 @@ export const Overlay = styled(Dialog.Overlay)`
   background-color: rgba(91, 112, 131, 0.4);
   inset: 0;
 `
+
+const slidein = keyframes`
+  0% {
+    margin-left: -50%;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+`
+
 export const Content = styled(Dialog.Content)`
   width: 70%;
   height: 100vh;
@@ -18,8 +29,9 @@ export const Content = styled(Dialog.Content)`
   position: fixed;
   top: 0;
   left: 0;
-
   z-index: 1;
+
+  animation: ${slidein} 0.4s linear;
 
   header {
     display: flex;

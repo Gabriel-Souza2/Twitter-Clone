@@ -1,4 +1,12 @@
-import { DotsThree } from 'phosphor-react'
+import {
+  CalendarBlank,
+  DotsThree,
+  Gif,
+  ImageSquare,
+  ListBullets,
+  MapPin,
+  Smiley,
+} from 'phosphor-react'
 import * as Dialog from '@radix-ui/react-dialog'
 
 import { Avatar } from '../../components/Avatar'
@@ -11,9 +19,11 @@ import {
   UserButton,
   InitialPageContainer,
   TweetsContainer,
+  Post,
   TrendsContainer,
 } from './styles'
 import { MenuMobile } from '../../components/MenuMobile'
+import { TweetarButton } from '../../components/TweetarButton'
 
 export function Home() {
   return (
@@ -47,6 +57,54 @@ export function Home() {
             </div>
             Página Incial
           </header>
+          <main>
+            <Post>
+              <Avatar
+                size={48}
+                uri="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              />
+              <div className="post-wrapper">
+                <input placeholder="O que está pensando?" />
+                <div className="options-wrapper">
+                  <ul className="input-options">
+                    <li>
+                      <button>
+                        <ImageSquare size={20} />
+                      </button>
+                    </li>
+                    <li>
+                      <button>
+                        <Gif size={20} />
+                      </button>
+                    </li>
+                    <li>
+                      <button>
+                        <ListBullets size={20} />
+                      </button>
+                    </li>
+                    <li>
+                      <button>
+                        <Smiley size={20} />
+                      </button>
+                    </li>
+                    <li>
+                      <button>
+                        <CalendarBlank size={20} />
+                      </button>
+                    </li>
+                    <li>
+                      <button>
+                        <MapPin size={20} />
+                      </button>
+                    </li>
+                  </ul>
+                  <div className="btn">
+                    <TweetarButton />
+                  </div>
+                </div>
+              </div>
+            </Post>
+          </main>
         </TweetsContainer>
         <TrendsContainer></TrendsContainer>
       </InitialPageContainer>

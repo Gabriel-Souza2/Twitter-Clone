@@ -24,32 +24,15 @@ export const Container = styled.div`
     margin-top: 0.5rem;
   }
 
-  .btn-tweetar {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: bold;
-
-    background-color: ${({ theme }) => theme.main};
+  .btn {
+    width: 100%;
+    height: 5.2rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 1.5rem;
-    border-radius: 9999px;
-
     margin-top: 1rem;
-
-    .btn-tweetar-icon {
-      display: none;
-      width: 24px;
-      height: 24px;
-    }
-
-    &:hover {
-      background-color: ${({ theme }) => theme['main-dark']};
-    }
   }
 
   @media screen and (max-width: 1024px) {
@@ -64,17 +47,6 @@ export const Container = styled.div`
 
     & {
       margin-right: 0;
-    }
-
-    .btn-tweetar {
-      padding: 1.2rem;
-      .btn-tweetar-icon {
-        display: block;
-      }
-
-      span {
-        display: none;
-      }
     }
   }
 `
