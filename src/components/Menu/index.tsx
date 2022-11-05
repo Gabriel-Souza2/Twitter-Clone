@@ -55,7 +55,7 @@ export function Menu() {
       </ul>
 
       <div className="btn">
-        <TweetarButton />
+        <TweetarButton message="Tweetar" />
       </div>
     </Container>
   )

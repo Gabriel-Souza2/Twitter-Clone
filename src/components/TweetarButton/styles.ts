@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
-export const BtnContainer = styled.div`
+interface TweetarButtonProps {
+  fontSize: number
+}
+
+export const BtnContainer = styled.div<TweetarButtonProps>`
   width: 100%;
   height: 100%;
   .btn-tweetar {
-    text-decoration: none;
     color: #fff;
-    font-size: 1.8rem;
+    font-size: ${({ fontSize }) => fontSize}rem;
     font-weight: bold;
+    border: none;
 
     background-color: ${({ theme }) => theme.main};
 
@@ -19,6 +23,7 @@ export const BtnContainer = styled.div`
     align-items: center;
 
     border-radius: 9999px;
+    cursor: pointer;
 
     .btn-tweetar-icon {
       display: none;
@@ -26,8 +31,13 @@ export const BtnContainer = styled.div`
       height: 24px;
     }
 
-    &:hover {
+    &:hover:enabled {
       background-color: ${({ theme }) => theme['main-dark']};
+    }
+
+    :disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
   }
 

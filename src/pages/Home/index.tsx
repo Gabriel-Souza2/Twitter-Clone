@@ -99,7 +99,11 @@ export function Home() {
                     </li>
                   </ul>
                   <div className="btn">
-                    <TweetarButton />
+                    <TweetarButton
+                      message="Tweetar"
+                      fontSize={1.5}
+                      disabled={true}
+                    />
                   </div>
                 </div>
               </div>

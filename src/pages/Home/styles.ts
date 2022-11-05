@@ -106,11 +106,13 @@ export const TweetsContainer = styled.div`
 
 export const Post = styled.div`
   margin-top: 6.5rem;
-  padding: 0 2rem;
+  padding: 0 2rem 1.5rem;
 
   display: flex;
   flex-direction: row;
   gap: 2rem;
+
+  border-bottom: 1px solid ${({ theme }) => theme.borders};
 
   .post-wrapper {
     flex: 1;
