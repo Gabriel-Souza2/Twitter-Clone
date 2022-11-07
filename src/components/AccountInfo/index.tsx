@@ -10,7 +10,7 @@ import {
 } from 'phosphor-react'
 import { Avatar } from '../Avatar'
 import {
-  MenuMobileContainer,
+  AccountInfoContainer,
   Overlay,
   Content,
   CloseButton,
@@ -22,7 +22,7 @@ import {
 
 export function AccountInfo() {
   return (
-    <MenuMobileContainer>
+    <AccountInfoContainer>
       <Content>
         <header>
           <Title>Informações da Conta</Title>
@@ -115,6 +115,6 @@ export function AccountInfo() {
         </Main>
       </Content>
       <Overlay />
-    </MenuMobileContainer>
+    </AccountInfoContainer>
   )
 }

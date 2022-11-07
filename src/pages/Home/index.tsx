@@ -13,10 +13,12 @@ import {
   InitialPageContainer,
   TweetsContainer,
   TrendsContainer,
+  MenuMobileContainer,
 } from './styles'
 import { AccountInfo } from '../../components/AccountInfo'
 import { TweetPainel } from '../../components/TweetPainel'
 import { TweetarButtonAdaptative } from '../../components/Button/TweetarButtonAdaptative'
+import { MenuMobile } from '../../components/MenuMobile'
 
 export function Home() {
   return (
@@ -61,6 +63,9 @@ export function Home() {
         </TweetsContainer>
         <TrendsContainer></TrendsContainer>
       </InitialPageContainer>
+      <MenuMobileContainer>
+        <MenuMobile />
+      </MenuMobileContainer>
     </HomeContainer>
   )
 }

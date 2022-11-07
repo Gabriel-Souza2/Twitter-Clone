@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import * as Dialog from '@radix-ui/react-dialog'
 
-export const MenuMobileContainer = styled(Dialog.Portal)``
+export const AccountInfoContainer = styled(Dialog.Portal)``
 
 export const Overlay = styled(Dialog.Overlay)`
   position: fixed;

@@ -103,8 +103,8 @@ export const TweetsContainer = styled.div`
   .btn-float-tweetar {
     display: none;
     position: fixed;
-    bottom: 70px;
-    right: 20px;
+    bottom: 80px;
+    right: 30px;
     width: 4.8rem;
     height: 4.8rem;
   }
@@ -130,3 +130,16 @@ export const TweetsContainer = styled.div`
 `
 
 export const TrendsContainer = styled.div``
+
+export const MenuMobileContainer = styled.div`
+  width: 100%;
+  height: 5.6rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: none;
+
+  @media screen and (max-width: 450px) {
+    display: block;
+  }
+`
