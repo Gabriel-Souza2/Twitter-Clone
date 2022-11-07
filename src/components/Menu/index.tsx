@@ -7,7 +7,7 @@ import {
   TwitterLogo,
   User,
 } from 'phosphor-react'
-import { TweetarButton } from '../TweetarButton'
+import { TweetarButtonAdaptative } from '../Button/TweetarButtonAdaptative'
 import { Container, MenuButton } from './styles'
 
 export function Menu() {
@@ -55,7 +55,7 @@ export function Menu() {
       </ul>
 
       <div className="btn">
-        <TweetarButton message="Tweetar" />
+        <TweetarButtonAdaptative message="Tweetar" />
       </div>
     </Container>
   )

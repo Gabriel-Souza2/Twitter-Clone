@@ -93,6 +93,13 @@ export const TweetsContainer = styled.div`
     display: none;
   }
 
+  .tweets-painel-wrapper {
+    margin-top: 6.5rem;
+    padding: 0 2rem 1.5rem;
+
+    border-bottom: 1px solid ${({ theme }) => theme.borders};
+  }
+
   @media screen and (max-width: 450px) {
     & header {
       font-size: 1.6rem;
@@ -101,68 +108,6 @@ export const TweetsContainer = styled.div`
     .avatar-wrapper {
       display: block;
     }
-  }
-`
-
-export const Post = styled.div`
-  margin-top: 6.5rem;
-  padding: 0 2rem 1.5rem;
-
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-
-  border-bottom: 1px solid ${({ theme }) => theme.borders};
-
-  .post-wrapper {
-    flex: 1;
-    input {
-      width: 100%;
-      background: transparent;
-      border: none;
-
-      font-size: 2rem;
-      color: ${({ theme }) => theme.nick};
-      padding: 1.2rem 0;
-
-      &::placeholder {
-        color: ${({ theme }) => theme.nick};
-      }
-    }
-  }
-
-  .options-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-top: 2rem;
-  }
-
-  .input-options {
-    list-style: none;
-
-    li {
-      display: inline-block;
-
-      button {
-        background: transparent;
-        border: none;
-        color: ${({ theme }) => theme.main};
-        border-radius: 50%;
-        padding: 0.8rem;
-
-        &:hover {
-          background-color: ${({ theme }) => theme['background-input-options']};
-        }
-      }
-    }
-  }
-
-  .btn {
-    width: 10rem;
-    height: 3.8rem;
   }
 `
 

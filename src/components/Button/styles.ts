@@ -4,7 +4,7 @@ interface TweetarButtonProps {
   fontSize: number
 }
 
-export const BtnContainer = styled.div<TweetarButtonProps>`
+const BaseButton = styled.div<TweetarButtonProps>`
   width: 100%;
   height: 100%;
   .btn-tweetar {
@@ -40,7 +40,11 @@ export const BtnContainer = styled.div<TweetarButtonProps>`
       cursor: not-allowed;
     }
   }
+`
 
+export const TweetarButtonContainer = styled(BaseButton)``
+
+export const TweetarButtonAdaptativeContainer = styled(BaseButton)`
   @media screen and (max-width: 1024px) {
     & {
       width: auto;
