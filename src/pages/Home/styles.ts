@@ -98,6 +98,24 @@ export const TweetsContainer = styled.div`
     padding: 0 2rem 1.5rem;
 
     border-bottom: 1px solid ${({ theme }) => theme.borders};
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    .tweet-wrapper {
+      width: 100%;
+
+      .options-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .btn {
+          width: 10rem;
+          height: 3.8rem;
+        }
+      }
+    }
   }
 
   .btn-float-tweetar {
