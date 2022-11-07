@@ -58,4 +58,10 @@ export const TweetPainelContainer = styled.div`
     width: 10rem;
     height: 3.8rem;
   }
+
+  @media screen and (max-width: 690px) {
+    .input-options > li:nth-last-child(-n + 2) {
+      display: none;
+    }
+  }
 `

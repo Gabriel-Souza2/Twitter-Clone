@@ -14,8 +14,9 @@ import {
   TweetsContainer,
   TrendsContainer,
 } from './styles'
-import { MenuMobile } from '../../components/MenuMobile'
+import { AccountInfo } from '../../components/AccountInfo'
 import { TweetPainel } from '../../components/TweetPainel'
+import { TweetarButtonAdaptative } from '../../components/Button/TweetarButtonAdaptative'
 
 export function Home() {
   return (
@@ -44,7 +45,7 @@ export function Home() {
                     />
                   </button>
                 </Dialog.Trigger>
-                <MenuMobile />
+                <AccountInfo />
               </Dialog.Root>
             </div>
             Página Incial
@@ -52,6 +53,9 @@ export function Home() {
           <main>
             <div className="tweets-painel-wrapper">
               <TweetPainel />
+            </div>
+            <div className="btn-float-tweetar">
+              <TweetarButtonAdaptative message="Tweetar" fontSize={1.5} />
             </div>
           </main>
         </TweetsContainer>

@@ -52,7 +52,7 @@ export const UserButton = styled.a`
 
 export const InitialPageContainer = styled.div`
   display: grid;
-  grid-template-columns: 60% auto;
+  grid-template-columns: 65% auto;
 
   @media screen and (max-width: 768px) {
     max-width: 59rem;
@@ -100,12 +100,30 @@ export const TweetsContainer = styled.div`
     border-bottom: 1px solid ${({ theme }) => theme.borders};
   }
 
+  .btn-float-tweetar {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
   @media screen and (max-width: 450px) {
     & header {
       font-size: 1.6rem;
       justify-content: center;
     }
+
     .avatar-wrapper {
+      display: block;
+    }
+
+    .tweets-painel-wrapper {
+      display: none;
+    }
+
+    .btn-float-tweetar {
       display: block;
     }
   }

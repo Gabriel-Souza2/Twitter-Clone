@@ -20,7 +20,7 @@ import {
   Options,
 } from './styles'
 
-export function MenuMobile() {
+export function AccountInfo() {
   return (
     <MenuMobileContainer>
       <Content>
