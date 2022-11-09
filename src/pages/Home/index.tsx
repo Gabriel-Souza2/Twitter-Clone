@@ -22,16 +22,19 @@ import { InputTweet } from '../../components/InputTweet'
 import { useState } from 'react'
 import { InputOptions } from '../../components/TweetOptions'
 import { TweetarButton } from '../../components/Button/TweetarButton'
+import { useNavigate } from 'react-router-dom'
 
 export function Home() {
   const [tweetIsEmpty, setTweetIsEmpty] = useState<boolean>(true)
+
+  const navigate = useNavigate()
 
   function handleOnChangeTweet() {
     setTweetIsEmpty(false)
   }
 
   function handleFloatButtonTweet() {
-    console.log('here')
+    navigate('/compose/tweet')
   }
 
   return (
