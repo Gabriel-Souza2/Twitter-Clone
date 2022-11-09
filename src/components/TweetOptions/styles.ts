@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const TweetOptionsContainer = styled.div`
-  .input-options {
+  ul {
     list-style: none;
 
     li {
@@ -15,14 +15,14 @@ export const TweetOptionsContainer = styled.div`
         padding: 0.8rem;
 
         &:hover {
-          background-color: ${({ theme }) => theme['background-input-options']};
+          background-color: ${({ theme }) => theme['background-tweet-options']};
         }
       }
     }
   }
 
   @media screen and (max-width: 690px) {
-    .input-options > li:nth-last-child(-n + 2) {
+    ul > li:nth-last-child(-n + 2) {
       display: none;
     }
   }

@@ -3,7 +3,7 @@ export const defaultTheme = {
   'btn-menu-hover': '#181818',
   main: 'rgb(29, 155, 240)',
   'main-dark': '#1B8CD8',
-  'background-input-options': 'rgb(29, 155, 240, 0.1)',
+  'background-tweet-options': 'rgb(29, 155, 240, 0.1)',
   text: '#E7E9EA',
   nick: '#71767b',
   'secundary-text': '#4F5255',

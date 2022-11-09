@@ -12,7 +12,7 @@ import { TweetOptionsContainer } from './styles'
 export function InputOptions() {
   return (
     <TweetOptionsContainer>
-      <ul className="input-options">
+      <ul>
         <li>
           <button>
             <ImageSquare size={20} />

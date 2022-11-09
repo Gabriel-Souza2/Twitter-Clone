@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
-interface TweetarButtonProps {
-  fontSize: number
+interface ButtonProps {
+  fontSize: 'small' | 'medium'
 }
 
-const BaseButton = styled.div<TweetarButtonProps>`
+export const BaseButton = styled.div<ButtonProps>`
   width: 100%;
   height: 100%;
   .btn-tweetar {
     color: #fff;
-    font-size: ${({ fontSize }) => fontSize}rem;
+    font-size: ${({ fontSize }) => (fontSize === 'small' ? 1.5 : 1.8)}rem;
     font-weight: bold;
     border: none;
 
@@ -42,9 +42,9 @@ const BaseButton = styled.div<TweetarButtonProps>`
   }
 `
 
-export const TweetarButtonContainer = styled(BaseButton)``
-
-export const TweetarButtonAdaptativeContainer = styled(BaseButton)`
+export const TweetarButtonAdaptativeContainer = styled.div`
+  width: 100%;
+  height: 100%;
   @media screen and (max-width: 1024px) {
     & {
       width: auto;
@@ -56,7 +56,12 @@ export const TweetarButtonAdaptativeContainer = styled(BaseButton)`
           display: block;
         }
       }
-      span {
+      .icon {
+        width: 100%;
+        height: 100%;
+      }
+
+      .message {
         display: none;
       }
     }

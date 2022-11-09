@@ -27,8 +27,11 @@ export function Home() {
   const [tweetIsEmpty, setTweetIsEmpty] = useState<boolean>(true)
 
   function handleOnChangeTweet() {
-    console.log('here')
     setTweetIsEmpty(false)
+  }
+
+  function handleFloatButtonTweet() {
+    console.log('here')
   }
 
   return (
@@ -75,7 +78,7 @@ export function Home() {
                   <div className="btn">
                     <TweetarButton
                       message="Tweetar"
-                      fontSize={1.5}
+                      fontSize={'small'}
                       disabled={tweetIsEmpty}
                     />
                   </div>
@@ -83,7 +86,11 @@ export function Home() {
               </div>
             </div>
             <div className="btn-float-tweetar">
-              <TweetarButtonAdaptative message="Tweetar" fontSize={1.5} />
+              <TweetarButtonAdaptative
+                message="Tweetar"
+                fontSize={'medium'}
+                onClick={handleFloatButtonTweet}
+              />
             </div>
           </main>
         </TweetsContainer>

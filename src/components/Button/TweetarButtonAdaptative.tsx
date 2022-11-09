@@ -1,18 +1,23 @@
 import { PencilLine } from 'phosphor-react'
 import { TweetarButtonProps } from './TweetarButtonInterface'
+import { Button } from './Button'
 import { TweetarButtonAdaptativeContainer } from './styles'
 
 export function TweetarButtonAdaptative({
   message,
-  fontSize = 1.8,
+  fontSize = 'medium',
   disabled = false,
+  onClick = () => {},
 }: TweetarButtonProps) {
   return (
-    <TweetarButtonAdaptativeContainer fontSize={fontSize}>
-      <button className="btn-tweetar" disabled={disabled}>
-        <PencilLine className="btn-tweetar-icon" weight="regular" />
-        <span>{message}</span>
-      </button>
+    <TweetarButtonAdaptativeContainer>
+      <Button
+        message={message}
+        fontSize={fontSize}
+        disabled={disabled}
+        onClick={onClick}
+        icon={<PencilLine className="btn-tweetar-icon" weight="regular" />}
+      />
     </TweetarButtonAdaptativeContainer>
   )
 }
