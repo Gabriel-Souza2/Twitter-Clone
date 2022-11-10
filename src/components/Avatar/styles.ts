@@ -8,8 +8,8 @@ export const AvatarContainer = styled.div<AvatarProps>`
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
   img {
-    width: 100%;
-    height: 100%;
+    width: ${({ size }) => size}px;
+    height: ${({ size }) => size}px;
     border-radius: 99999px;
   }
 `

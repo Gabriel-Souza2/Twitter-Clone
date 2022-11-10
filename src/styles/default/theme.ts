@@ -10,4 +10,8 @@ export const defaultTheme = {
   borders: '#2F3336',
   logo: '#D6D9DB',
   'logo-hover': '#050F18',
+  retweet: '#44BA7D',
+  'retweet-background': 'rgba(52, 147, 99, 0.2)',
+  like: '#F7547F',
+  'like-background': 'rgba(247, 84, 127, 0.2)',
 }

@@ -23,6 +23,7 @@ import { useState } from 'react'
 import { InputOptions } from '../../components/TweetOptions'
 import { TweetarButton } from '../../components/Button/TweetarButton'
 import { useNavigate } from 'react-router-dom'
+import { Tweet } from '../../components/Tweet'
 
 export function Home() {
   const [tweetIsEmpty, setTweetIsEmpty] = useState<boolean>(true)
@@ -52,7 +53,7 @@ export function Home() {
       </MenuContainer>
       <InitialPageContainer>
         <TweetsContainer>
-          <header>
+          <header className="tweets-container-header">
             <div className="avatar-wrapper">
               <Dialog.Root>
                 <Dialog.Trigger asChild>
@@ -94,6 +95,12 @@ export function Home() {
                 fontSize={'medium'}
                 onClick={handleFloatButtonTweet}
               />
+            </div>
+            <div className="tweets-wrapper">
+              {[1, 2, 3, 4, 5].map((value) => {
+                return <Tweet key={value} />
+              })}
+              <Tweet />
             </div>
           </main>
         </TweetsContainer>

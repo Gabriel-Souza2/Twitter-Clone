@@ -69,7 +69,7 @@ export const TweetsContainer = styled.div`
   height: 100vh;
   border-right: 1px solid ${({ theme }) => theme.borders};
 
-  header {
+  .tweets-container-header {
     height: 5.3rem;
     font-size: 2rem;
     font-weight: bold;
