@@ -25,6 +25,8 @@ export const BaseButton = styled.div<ButtonProps>`
     border-radius: 9999px;
     cursor: pointer;
 
+    transition: all 0.2s linear;
+
     .btn-tweetar-icon {
       display: none;
       width: 24px;

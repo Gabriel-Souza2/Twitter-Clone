@@ -62,6 +62,7 @@ export const MenuButton = styled.a<MenuButtonProps>`
   align-items: center;
   width: fit-content;
   gap: 2rem;
+  transition: all 0.15s linear;
 
   ${({ active }) =>
     active &&

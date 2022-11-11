@@ -6,6 +6,7 @@ export const HomeContainer = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: auto 1fr;
+  overflow: hidden;
 `
 
 export const MenuContainer = styled.aside`
@@ -31,7 +32,7 @@ export const UserButton = styled.a`
   display: flex;
   justify-content: space-between;
 
-  span.dots {
+  .dots {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +45,7 @@ export const UserButton = styled.a`
   }
 
   @media screen and (max-width: 1024px) {
-    span.dots {
+    .dots {
       display: none;
     }
   }
@@ -53,6 +54,8 @@ export const UserButton = styled.a`
 export const InitialPageContainer = styled.div`
   display: grid;
   grid-template-columns: 65% auto;
+  height: 100vh;
+  overflow-y: scroll;
 
   @media screen and (max-width: 768px) {
     max-width: 59rem;
@@ -66,7 +69,7 @@ export const InitialPageContainer = styled.div`
 `
 
 export const TweetsContainer = styled.div`
-  height: 100vh;
+  height: 100%;
   border-right: 1px solid ${({ theme }) => theme.borders};
 
   .tweets-container-header {
@@ -77,10 +80,20 @@ export const TweetsContainer = styled.div`
 
     display: flex;
     align-items: center;
+    justify-content: start;
 
     padding: 0 1.6rem;
+    width: 50%;
 
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
+
+    @media screen and (max-width: 768px) {
+      max-width: 59rem;
+    }
+
+    @media screen and (max-width: 450px) {
+      width: 100vw;
+    }
   }
 
   .avatar-menu-button {
@@ -93,8 +106,11 @@ export const TweetsContainer = styled.div`
     display: none;
   }
 
+  .main-content {
+    margin-top: 6rem;
+  }
+
   .tweets-painel-wrapper {
-    margin-top: 6.5rem;
     padding: 0 2rem 1.5rem;
 
     border-bottom: 1px solid ${({ theme }) => theme.borders};
@@ -116,6 +132,10 @@ export const TweetsContainer = styled.div`
         }
       }
     }
+  }
+
+  .tweets-wrapper {
+    overflow: auto;
   }
 
   .btn-float-tweetar {
@@ -156,6 +176,7 @@ export const MenuMobileContainer = styled.div`
   bottom: 0;
   left: 0;
   display: none;
+  background-color: ${({ theme }) => theme.background};
 
   @media screen and (max-width: 450px) {
     display: block;

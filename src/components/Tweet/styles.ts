@@ -59,7 +59,7 @@ export const TweetContainer = styled.div`
 
   .actions {
     margin-top: 1rem;
-    width: 42.5rem;
+    max-width: 42.5rem;
     display: flex;
     justify-content: space-between;
   }

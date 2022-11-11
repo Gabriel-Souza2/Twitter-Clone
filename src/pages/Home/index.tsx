@@ -69,7 +69,7 @@ export function Home() {
             </div>
             Página Incial
           </header>
-          <main>
+          <main className="main-content">
             <div className="tweets-painel-wrapper">
               <Avatar
                 size={48}
